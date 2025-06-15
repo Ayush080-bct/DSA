@@ -19,7 +19,7 @@ void operate(struct stack*, char);
 int main() {
     struct stack s = {-1};
     string input;
-    cout << "Enter the postfix expression (space-separated): ";
+    cout << "Enter the postfix expression by seprating space : ";
     getline(cin, input);
     stringstream ss(input);
     string token;
