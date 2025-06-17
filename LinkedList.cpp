@@ -10,7 +10,6 @@ struct sll {
 sll* first = NULL;
 sll* last = NULL;
 
-// Insertion at the beginning
 void insertion(int a) {
     sll* newnode = new sll();
     newnode->data = a;
@@ -24,7 +23,6 @@ void insertion(int a) {
     }
 }
 
-// Traversal function to see the list
 void display() {
     sll* temp = first;
     while (temp != NULL) {
