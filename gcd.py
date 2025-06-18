@@ -1,3 +1,4 @@
+#not recursive
 def Gcd(a, b):
     if b == 0:
         return a
