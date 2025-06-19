@@ -3,10 +3,10 @@ using namespace std;
 
 struct sll {
     int data;
-    sll* Next; // Self-referential structure
+    sll* Next; 
 };
 
-// Declare global pointers
+
 sll* first = NULL;
 sll* last = NULL;
 
@@ -33,21 +33,8 @@ void display() {
 }
 
 int main() {
-    int a;
-    char ch;
+    insertion(5);
 
-    cout << "Enter data into the linked list:\n";
-
-    do {
-        cout << "Enter value: ";
-        cin >> a;
-        insertion(a);
-
-        cout << "Add another node? (y/n): ";
-        cin >> ch;
-    } while (ch == 'y' || ch == 'Y');
-
-    cout << "Linked list contents:\n";
     display();
 
     return 0;

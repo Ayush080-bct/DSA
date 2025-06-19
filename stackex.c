@@ -14,6 +14,7 @@ int IsFull(struct stack *s);
 int IsEmpty(struct stack *s);
 void Push(struct stack *s, float element);
 float pop(struct stack *s);
+void Display(struct stack* s);
 
 int main() {
     struct stack s;
@@ -22,7 +23,7 @@ int main() {
     int choice;
 
     while (1) {
-        {printf("1. CheckIsFull\n2. CheckIsEmpty\n3. PushElement\n4. PopElement\n5. Exit\n");
+        {printf("1. CheckIsFull\n2. CheckIsEmpty\n3. PushElement\n4. PopElement\n5. Display \n6. Exit\n");
         printf("\nEnter your choice: ");
         scanf("%d", &choice);
         }
@@ -52,7 +53,9 @@ int main() {
                     printf("Stack Underflow\n");
                 }
                 break;
-            case 5: 
+            case 5:Display(&s);
+                break;
+            case 6: 
                 exit(0);
             default:
                 printf("Invalid input\n");
@@ -98,5 +101,17 @@ float pop(struct stack *s) {
         float element = s->data[s->tos];
         s->tos--;
         return element;    
+    }
+}
+void Display(struct stack* s) {
+
+    if (IsEmpty(s)) {
+        printf("Stack is Empty.\n");
+    } else {
+        printf("Stack elements: ");
+        for (int i = 0; i <= s->tos; i++) {
+            printf("%.2f ", s->data[i]);
+        }
+        printf("\n");
     }
 }
