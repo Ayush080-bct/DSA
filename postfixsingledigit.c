@@ -46,7 +46,7 @@ int main()
     
     scanf(" %s",expression);
 
-    float op1,op2,op3,op4,result;
+    float op1,op2,result;
     for(i=0;i<5;i++){
         if(isdigit(expression[i]))
         {
@@ -57,12 +57,11 @@ int main()
         else {
            op1=pop(&s);
            op2=pop(&s);
-           op3=pop(&s);
-           op4=pop(&s);
+          
            switch((char)(expression[i]))
            {
             case '+':
-              result=op2*10+op1+op4*10+op3;
+              result=op2+op1;
               break;
             case '-':
               result=op2-op1;

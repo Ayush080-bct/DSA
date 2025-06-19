@@ -1,10 +1,11 @@
 #include"Myfloor_func.h"
+#include<stdio.h>
 
 void merge(int a[],int l,int m,int r)
 {
     int i,j,k;
     int b[100];
-    i=l;j=m;k=l;
+    i=l;j=m+1;k=l;
     while(i<=m && j<=r){
         if(a[i]<a[j])
         {
@@ -31,11 +32,12 @@ void merge(int a[],int l,int m,int r)
 }
 void mergesort(int a[],int l,int r){
     if(l<r){
-        int m=myfloor((l+r)/2.0);
+        int m=myfloor((l+r)/2.0f);
+       
         
         mergesort(a,l,m);
         mergesort(a,m+1,r);
-        merge(a,l,m+1,r);
+        merge(a,l,m,r);
     }
 
 }
