@@ -1,4 +1,4 @@
-def precedence(op):
+def pre(op):
     if op =='+' or op == '-':
         return 1
     elif op=='*' or op=='/':
@@ -23,7 +23,7 @@ def infixtopostfix(tokens):
                   a.append(stack.pop())
             stack.pop()
         else:
-            while(stack and precedence(stack[-1])>=precedence(token)):
+            while(stack and pre(stack[-1])>=pre(token)):
                 a.append(stack.pop())
             stack.append(token)
     while stack:
