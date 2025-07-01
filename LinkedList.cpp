@@ -38,11 +38,9 @@ void insertionatend(int a)
     }
 }
 
-void inseratspecpos(int a)
+void inseratspecpos(int a,int pos)
 {
-    int pos;
-    cout << "Enter the position of list where data should be inserted: ";
-    cin >> pos;
+   
     sll* newnode = new sll();
     newnode->data = a;
     newnode->next = NULL;
@@ -169,6 +167,7 @@ void search(int key)
         {
             flag=1;
             cout<<"Element found ! "<<endl;
+            break;
 
         }
         temp=temp->next;
@@ -193,7 +192,7 @@ int main() {
     insertionatbeg(5);
     insertionatbeg(10);
     insertionatend(20);
-    inseratspecpos(15);
+    inseratspecpos(15,2);
     display();
     search(15);
     search(100);

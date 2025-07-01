@@ -4,7 +4,8 @@ def cal(n):
             return i
 n=60
 print(cal(n))  
-     
+
+    
 
      
 
