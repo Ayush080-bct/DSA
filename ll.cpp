@@ -27,10 +27,10 @@ class linkedlist
         temp = NULL;
         newnode = NULL;
     }
-    node* createnewnode(float dat)
+    node* createnewnode(float element)
     {
         newnode = new node;
-        newnode->data = dat;
+        newnode->data = element;
         return newnode;
     }
     void insertionfrombeg(int data)
@@ -81,9 +81,11 @@ class linkedlist
             cout << "List is Empty" << endl;
         while(temp != NULL)
         {
-            cout << "-> " << temp->data << endl;
+            cout  << temp->data<< " <-> " ;
             temp = temp->next;
         }
+        cout<<" Null";
+        cout<<endl;
     }
 };
 int main()

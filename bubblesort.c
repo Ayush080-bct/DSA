@@ -2,6 +2,8 @@
 //inplace
 //adaptive
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 
 void swap(int *a,int *b)
 {
@@ -34,15 +36,34 @@ void Bubblesort(int a[],int n)
 int main()
 {
     int n,a[100];
+    time_t start=time(NULL);
     printf("Enter the number of Elements: ");
     scanf("%d",&n);
     printf("Enter the elements: ");
     for(int i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        a[i]=rand()%10;
     }
+    for(int i=0;i<n;i++)
+    {
+        printf("%d",a[i]);
+        printf("\t");
+    }
+    printf("\n");
+     
+
+
+
+
+    
+
     
     Bubblesort(a,n);
+    printf("\n");
+    time_t end=time(NULL);
+int second=difftime(end,start);
+printf("The time taken is %d",second);
+
 
     return 0;
 

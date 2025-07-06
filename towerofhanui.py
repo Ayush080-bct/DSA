@@ -7,7 +7,7 @@ def toh(n,src,dst,tmp,file):
         toh(n-1,src,tmp,dst,file)
         file.write(f'Move the Disc {n} from {src} to {dst}\n')
         toh(n-1,tmp,dst,src,file)
-with open ("example.txt",'w') as file:
+with open ("exks.txt",'w') as file:
 
     n=int(input("Enter the number of disc: "))
     start=time.time()
