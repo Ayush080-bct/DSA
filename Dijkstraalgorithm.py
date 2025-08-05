@@ -84,15 +84,15 @@ def dijkstra(vertices, start_vertex):
         path_str = ' -> '.join(path)
         print(f"Shortest path to {v.name}: {path_str} (Cost: {cost[v]})")
 
-# ==== Main ====
-# Create vertices
+#main
+#createvertice
 A = VertexNode('A')
 B = VertexNode('B')
 C = VertexNode('C')
 D = VertexNode('D')
 E = VertexNode('E')
 
-# Build graph
+#Buildgraph
 A.add_edge(B, 3)
 A.add_edge(C, 1)
 B.add_edge(C, 7)

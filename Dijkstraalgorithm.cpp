@@ -1,4 +1,5 @@
 #include<iostream>
+#include<map>
 class dll{
     int data;
     class dll *first;
