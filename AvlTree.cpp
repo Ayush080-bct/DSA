@@ -153,6 +153,7 @@ class AvlTree {
             } else if (root->right == NULL) {
                 AvlTree *temp = root->left;
                 if (temp) temp->parent = root->parent;
+                // std::cout<<"A"<<std::endl;
                 delete root;
                 return temp;
             } else {
@@ -215,7 +216,7 @@ int main() {
     AvlTree *root = NULL;
     AvlTree *temp = NULL;
     AvlTree A;
-    int a[] = {50, 30, 70, 60, 80, 55};
+    int a[] = {10, 9, 8, 4, 5, 7, 32, 16, 11, 1, 12, 2};
     int n = sizeof(a) / sizeof(a[0]);
     int choice, element, i;
     while (true) {

@@ -6,7 +6,7 @@ G={
     'x':{'z':4},
     'y':{'t':3,'z':2,'x':9},
     'z':{'x':6,'s':7}
-}
+}#undirected Graph
 
 
 def INITIALIZE_SINGLE_SOURCE(G, t):
@@ -49,5 +49,6 @@ cost,prev=DJ(G,t)
 for vertex in G.keys():
     print(f'Shortest Path From {t} to {vertex} is {RECONSTRUCT_PATH(vertex,prev)}')
     print(f'Cost is {cost[vertex]}')
+    
 
 
