@@ -29,7 +29,8 @@ def krushkal(G):
         for v in G[u]:
             if (v, u, G[u][v]) not in edges:
                 edges.append((u, v, G[u][v]))
-    edges.sort(key=lambda edge: edge[2])
+    edges.sort(key=lambda edge: edge[2])#sort the mst in ascending order of weight
+    
     for u, v, cost in edges:
         if find(set, u) != find(set, v):  
             mst.append((u, v, cost))  
@@ -38,10 +39,12 @@ def krushkal(G):
     return mst
 
 mst=krushkal(G)
+total_cost=0
 print("Minimum Spanning Tree:")
 for u, v, cost in mst:
     print(f"{u} - {v} (weight: {cost})")
-
+    total_cost+=cost
+print(f'The Minimum Span Tree has {total_cost} total cost which is Minimum from all the spanning tree created from Graph')
 
 
 

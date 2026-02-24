@@ -9,7 +9,8 @@ void insertion(int a[], int n)
 
 {
     int temp, i, j;
-    for (i = 1; i < n; i++) {
+    for (int gap=n/2;gap>0;gap/2){
+    for (i = gap; i < n; i++) {
         j = i - 1;
         temp = a[i];
         while (j >= 0 && temp < a[j])
@@ -20,6 +21,7 @@ void insertion(int a[], int n)
         }
         a[j + 1] = temp;
     }
+}
     printf("Sorted oreder : ");
     for (i = 0; i < n; i++) {
         printf("%d\t", a[i]);

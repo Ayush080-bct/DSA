@@ -129,7 +129,7 @@ void Display(struct QUEUE *Q) {
 }
 int Search(struct QUEUE *Q, float key) {
     
-    for (int i = Q->FRONT; i<Q->REAR; i++) {
+    for (int i = Q->FRONT; i<=Q->REAR; i++) {
         if (Q->data[i] == key) {
             return 1;
         }

@@ -191,14 +191,14 @@ void reverse()
 {
     sll* prev = NULL;
     sll* temp = first;
-    sll* next = NULL;
+    sll* tnext = NULL;
 
     while (temp != NULL)
     {
-        next = temp->next;
+        tnext = temp->next;
         temp->next = prev;
         prev = temp;
-        temp = next;
+        temp = tnext;
     }
 
     

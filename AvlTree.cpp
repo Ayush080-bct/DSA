@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <iostream>
 
-class AvlTree {
+    class AvlTree {
     int data;
     AvlTree *left = NULL, *right = NULL, *parent = NULL;
     int height;
@@ -96,7 +96,7 @@ class AvlTree {
             std::cout << "Parent of " << root->left->data << " Is "
                       << root->data << std::endl;
         } else {
-            root->right = Insert_node(root->right, val);
+            root->right = Insert_node(root->right, val);    
             root->right->parent = root;
             std::cout << "Parent of " << root->right->data << " Is "
                       << root->data << std::endl;
@@ -151,11 +151,11 @@ class AvlTree {
                 delete root;
                 return temp;
             } else if (root->right == NULL) {
-                AvlTree *temp = root->left;
-                if (temp) temp->parent = root->parent;
-                // std::cout<<"A"<<std::endl;
-                delete root;
-                return temp;
+                    AvlTree *temp = root->left;
+                    if (temp) temp->parent = root->parent;
+                    // std::cout<<"A"<<std::endl;
+                    delete root;
+                    return temp;
             } else {
                 // case 3
                 AvlTree *temp = FIND_MINIMUM(root->right);
@@ -180,7 +180,7 @@ class AvlTree {
         return root;
     }
 
-    void display(AvlTree *root) {
+    /*void display(AvlTree *root) {
         if (root != NULL) {
             std::cout << "(";
 
@@ -199,8 +199,8 @@ class AvlTree {
         } else {
             std::cout << "NULL";
         }
-    }
-    /*void display(AvlTree *root, int space = 0, int height = 10) {
+    }*/
+    void display(AvlTree *root, int space = 0, int height = 10) {
     if (root == NULL) return;
     space += height;
     display(root->right, space);
@@ -209,7 +209,7 @@ class AvlTree {
         std::cout << " ";
     std::cout << root->data << "\n";
     display(root->left, space);
-}*/
+}
 };
 
 int main() {

@@ -83,7 +83,7 @@ int IsFull(struct QUEUE *Q) {
 }
 
 int IsEmpty(struct QUEUE *Q) {
-    return (Q->FRONT == -1);
+    return (Q->FRONT ==  0);
 }
 
 void EnQueue(struct QUEUE *Q, float element) {
